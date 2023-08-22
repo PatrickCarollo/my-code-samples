@@ -1,2 +1,2 @@
 # my-microservices
-Source code for my various personal projects
+Storage location for my various serverless microservices' source code.
