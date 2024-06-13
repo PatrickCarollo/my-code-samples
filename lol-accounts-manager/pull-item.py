@@ -1,3 +1,5 @@
+#Part of a system of functions for managing incoming and outgoing gaming accounts details for 
+# automating the storage and fulfilment flow.
 #Get account
 import boto3
 import json

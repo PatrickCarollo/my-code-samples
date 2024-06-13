@@ -1,4 +1,6 @@
-#Upload account
+#Part of a system of functions for managing incoming and outgoing gaming accounts details for 
+# automating the storage and fulfilment flow.
+# Upload Account
 import boto3
 import json
 import os

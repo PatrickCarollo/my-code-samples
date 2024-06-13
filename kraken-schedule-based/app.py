@@ -1,3 +1,16 @@
+'''
+Automates informed cryptocurrency trading- built around Kraken and Coinmarket API. This code is designed to be run on a 
+schedule in aws Lambda. Execution first accesses your Kraken Account's current order ledger and runs 
+different set of functions based on the most recent order type. 
+If order type is Sell with status Filled: Runs potential buy sequence- Accesses crypto price history via 
+CoinMarket Api and logic to determine if any
+symbols would be considered optimal entry points at the current time. Then executes via Kraken API if any are found to be optimal
+If order type is Buy with status filled: Runs Limit Sell sequence on order id and purchased volume.
+If order type is Sell and Open: Will wait a certain number of executions before executing edit order sequence which lowers
+the sell target price. This execution number is stored in SSM parameter store.
+If order type is Buy and open: Will wait a certain number of executions before executing a new buy sequence.
+
+'''
 import boto3
 import requests
 import json

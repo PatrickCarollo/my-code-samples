@@ -1,3 +1,9 @@
+'''
+Processing for Events from Api Gateway integration. 
+Event will contain an http request of a birthdate and this code is to return an exo planet name that is closest exo planet
+to the distance from earth that light has traveled since the entered data. This is a for-fun idea to conceptualize speed of light.
+Data from 3rd party http call to exo planet databased created and maintained by CalTech.
+'''
 import boto3
 import json
 import requests
